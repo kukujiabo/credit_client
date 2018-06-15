@@ -29,6 +29,15 @@ class Reward extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'getList' => [
+      
+        'reward_name' => 'reward_name|int|false|1|贷款名称',
+        'status' => 'status|int|false|1|贷款状态',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|10|每页条数',
+      
       ]
     
     ]);
@@ -57,6 +66,18 @@ class Reward extends BaseApi {
 
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
 
+  }
+
+  /**
+   * 查询赠品列表
+   * @desc 查询赠品列表
+   *
+   * @return array list
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
   }
 
 }

@@ -33,4 +33,10 @@ class RewardDm {
   
   }
 
+  public function getList($data) {
+  
+    return \App\request('App.Reward.ListQuery', $data);
+  
+  }
+
 }
