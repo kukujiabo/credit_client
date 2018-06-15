@@ -9,4 +9,10 @@ class BankDm {
   
   }
 
+  public function getAll($params) {
+  
+    return \App\request('App.Merchant.GetAll', $params);
+  
+  }
+
 }

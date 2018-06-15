@@ -20,8 +20,16 @@ class Bank extends BaseApi {
         'page'  => 'page|int|false|1|页码',
         'page_size'  => 'page_size|int|false|10|每页条数'
       
-      ]
+      ],
     
+      'getAll' => [
+      
+        'name'  => 'name|string|false||名称',
+        'fields'  => 'fields|string|false||名称',
+        'order'  => 'order|string|false||名称'
+      
+      ]
+
     ]);
   
   }
@@ -35,6 +43,18 @@ class Bank extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 查询所有银行
+   * @desc 查询所有银行
+   *
+   * @return array data
+   */
+  public function getAll() {
+  
+    return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__));
   
   }
 
