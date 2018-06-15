@@ -46,6 +46,18 @@ class Shop extends BaseApi {
       
         'shop_id' => 'shop_id|int|true||门店id'
       
+      ],
+
+      'listQuery' => [
+
+        'mid' => 'mid|int|false||商户id',
+        'min_credit' => 'min_credit|int|false||最小额度',
+        'max_credit' => 'max_credit|int|false||最大额度',
+        'order' => 'order|string|false||排序',
+        'fields' => 'fields|string|false||字段',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数',
+      
       ]
     
     
@@ -58,8 +70,7 @@ class Shop extends BaseApi {
    * @desc 查询门店详情
    *
    * @return array data
-   */
-  public function getDetail() {
+   */ public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
@@ -110,6 +121,18 @@ class Shop extends BaseApi {
   public function getFocusCount() {
   
     return $this->dm->getFocusCount($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询门店列表
+   * @desc 查询门店列表
+   *
+   * @return array list
+   */
+  public function listQuery() {
+  
+    return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
   
   }
 

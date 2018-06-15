@@ -59,4 +59,10 @@ class ShopDm {
   
   }
 
+  public function listQuery($params) {
+  
+    return \App\request('App.Shop.ListQuery', $params);  
+  
+  }
+
 }
