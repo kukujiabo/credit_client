@@ -13,7 +13,9 @@ class BusinessApply extends BaseApi {
     return $this->rules([
     
       'create' => [
-      
+
+        'type' => 'type|string|true||申请类型',
+        'relat_id' => 'relat_id|int|true||相关id',
         'name' => 'name|string|true||商户全称',
         'address' => 'address|string|true||商户地址',
         'contact' => 'contact|string|true||联系人',
