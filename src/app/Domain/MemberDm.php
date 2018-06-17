@@ -98,4 +98,13 @@ class MemberDm {
   
   }
 
+  /**
+   *
+   */
+  public function wechatPubLogin($params) {
+  
+    return \App\request('App.Member.wechatPubLogin', $params);
+  
+  }
+
 }

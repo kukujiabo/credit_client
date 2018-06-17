@@ -80,6 +80,12 @@ class Member extends BaseApi {
 
         'gender' => 'gender|int|false||会员性别'
       
+      ],
+
+      'wechatPubLogin' => [
+      
+        'code' => 'code|string|true||微信code',
+      
       ]
     
     ]);
@@ -179,6 +185,18 @@ class Member extends BaseApi {
   public function listQuery() {
   
     return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 微信公众号登陆
+   * @desc 微信公众号登陆
+   *
+   * @return 
+   */
+  public function wechatPubLogin() {
+  
+    return $this->dm->wechatPubLogin($this->retriveRuleParams(__FUNCTION__));
   
   }
 
