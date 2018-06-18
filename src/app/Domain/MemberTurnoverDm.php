@@ -27,7 +27,7 @@ class MemberTurnoverDm {
 
     $params['member_id'] = $this->_member->id;
   
-    return \App\request('App.BusinessApply.Create', $params);
+    return \App\request('App.MemberTurnover.GetList', $params);
   
   }
 
