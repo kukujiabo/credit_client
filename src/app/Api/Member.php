@@ -54,6 +54,12 @@ class Member extends BaseApi {
       
       ],
 
+      'listQuery' => [
+      
+        'reference' => 'reference|string|false||会员推荐码'
+      
+      ],
+
       'loginViaCode' => [
       
         'mobile' => 'mobile|string|true||手机号',
