@@ -87,6 +87,8 @@ class Member extends BaseApi {
       'wechatPubLogin' => [
       
         'code' => 'code|string|true||微信code',
+
+        'reference' => 'code|string|false||推荐人'
       
       ]
     
