@@ -18,7 +18,9 @@ class Member extends BaseApi {
 
         'member_name' => 'member_name|string|true||会员名称',
 
-        'password' => 'password|string|true||会员密码'
+        'password' => 'password|string|true||会员密码',
+
+        'token' => 'token|string|false||当前session令牌'
       
       ],
 
