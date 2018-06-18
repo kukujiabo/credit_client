@@ -31,4 +31,18 @@ class MemberTurnoverDm {
   
   }
 
+  public function applyCash($params) {
+  
+    if (!$this->_member->id) {
+    
+      return null;
+
+    }
+
+    $params['member_id'] = $this->_member->id;
+  
+    return \App\request('App.MemberTurnover.ApplyCash', $params);
+  
+  }
+
 }
