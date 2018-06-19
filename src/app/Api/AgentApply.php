@@ -23,8 +23,6 @@ class AgentApply extends BaseApi {
 
       'getDetail' => [
       
-      
-      
       ]
   
     ]); 

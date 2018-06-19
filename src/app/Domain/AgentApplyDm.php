@@ -19,9 +19,9 @@ class AgentApplyDm {
 
   public function create($data) {
 
-    $params['member_id'] = $this->_member->id;
+    $data['member_id'] = $this->_member->id;
   
-    return \App\request('App.AgentApply.Create', $params);
+    return \App\request('App.AgentApply.Create', $data);
   
   }
 
