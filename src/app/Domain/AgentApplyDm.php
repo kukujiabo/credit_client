@@ -29,7 +29,7 @@ class AgentApplyDm {
   
     $data['member_id'] = $this->_member->id;
 
-    return \App\request('App.AgentApply.GetDetail', $params);
+    return \App\request('App.AgentApply.GetDetail', $data);
   
   }
 
