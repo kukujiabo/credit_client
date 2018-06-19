@@ -17,7 +17,7 @@ include API_ROOT . '/config/di.php';
 
 //允许跨域请求
 header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: AX-TOKEN");
+header("Access-Control-Allow-Headers: CX-TOKEN");
 
 // 调试模式
 if (\PhalApi\DI()->debug) {
