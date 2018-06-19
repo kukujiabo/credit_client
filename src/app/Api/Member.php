@@ -24,6 +24,11 @@ class Member extends BaseApi {
       
       ],
 
+      'checkToken' => [
+      
+      
+      ],
+
       'loginViaPassword' => [
       
         'mobile' => 'mobile|string|true||手机号',
@@ -207,6 +212,18 @@ class Member extends BaseApi {
   public function wechatPubLogin() {
   
     return $this->dm->wechatPubLogin($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 检查token有效性
+   * @desc 检查token有效性
+   *
+   * @return
+   */
+  public function checkToken() {
+  
+    return $this->dm->checkToken();
   
   }
 

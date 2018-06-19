@@ -23,6 +23,15 @@ class MemberDm {
   }
 
   /**
+   * 检查token有效性
+   */
+  public function checkToken() {
+  
+    return $this->_member->id;
+  
+  }
+
+  /**
    * 注册
    */
   public function register($params) {
