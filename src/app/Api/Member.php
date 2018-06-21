@@ -3,7 +3,6 @@ namespace App\Api;
 
 /**
  * 会员接口
- *
  * @author Meroc Chen <398515393@qq.com> 2018-02-15
  */
 class Member extends BaseApi {
@@ -100,6 +99,12 @@ class Member extends BaseApi {
         'code' => 'code|string|true||微信code',
 
         'reference' => 'reference|string|false||推荐人'
+      
+      ],
+
+      'getQrcode' => [
+      
+        'url' => 'url|string|true||生成二维码的链接'
       
       ]
     
@@ -224,6 +229,18 @@ class Member extends BaseApi {
   public function checkToken() {
   
     return $this->dm->checkToken();
+  
+  }
+
+  /**
+   * 获得二维码
+   * @desc 获得二维码
+   *
+   * @return string
+   */
+  public function getQrcode() {
+  
+    return $this->dm->getQrcode($this->retriveRuleParams(__FUNCTION__));
   
   }
 

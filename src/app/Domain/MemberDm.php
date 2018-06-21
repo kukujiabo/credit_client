@@ -116,4 +116,12 @@ class MemberDm {
   
   }
 
+  public function getQrcode($params) {
+  
+    $params['id'] = $this->_member->id;
+
+    return \App\request('App.Member.GetMemberQrCode', $params);
+  
+  }
+
 }
