@@ -29,7 +29,7 @@ class PartnerDm {
   
     $data['reference'] = $this->_member->member_identity;
   
-    return \App\request('App.BusinessApply.GetReferenceList', $data);
+    return \App\request('App.BusinessApply.GetReferenceCards', $data);
   
   }
 
@@ -37,7 +37,7 @@ class PartnerDm {
   
     $data['reference'] = $this->_member->member_identity;
   
-    return \App\request('App.BusinessApply.GetReferenceList', $data);
+    return \App\request('App.BusinessApply.GetReferenceLoans', $data);
   
   }
 
