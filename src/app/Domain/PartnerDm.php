@@ -25,4 +25,20 @@ class PartnerDm {
   
   }
 
+  public function getReferenceCards() {
+  
+    $data['reference'] = $this->_member->member_identity;
+  
+    return \App\request('App.BusinessApply.GetReferenceList', $data);
+  
+  }
+
+  public function getReferenceLoans() {
+  
+    $data['reference'] = $this->_member->member_identity;
+  
+    return \App\request('App.BusinessApply.GetReferenceList', $data);
+  
+  }
+
 }

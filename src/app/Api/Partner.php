@@ -14,6 +14,13 @@ class Partner extends BaseApi {
     
       'getReferenceList' => [
       
+      ],
+
+      'getReferenceCards' => [
+      
+      ],
+
+      'getReferenceLoans' => [
       
       ]
     
@@ -33,5 +40,28 @@ class Partner extends BaseApi {
   
   }
 
+  /**
+   * 查询合伙人办理信息用卡
+   * @desc 查询合伙人办理信息用卡
+   *
+   * @return 
+   */
+  public function getReferenceCards() {
+  
+    return $this->dm->getReferenceCards($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询合伙人办理贷款信息
+   * @desc 查询合伙人办理贷款信息
+   *
+   * @return
+   */
+  public function getReferenceLoans() {
+  
+    return $this->dm->getReferenceLoans($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }
