@@ -106,6 +106,10 @@ class Member extends BaseApi {
       
         'url' => 'url|string|true||生成二维码的链接'
       
+      ],
+
+      'checkPartner' => [
+      
       ]
     
     ]);
@@ -241,6 +245,12 @@ class Member extends BaseApi {
   public function getQrcode() {
   
     return $this->dm->getQrcode($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  public function checkPartner() {
+  
+    return $this->dm->checkPartner($this->retriveRuleParams(__FUNCTION__));
   
   }
 

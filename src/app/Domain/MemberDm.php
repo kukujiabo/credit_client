@@ -124,4 +124,13 @@ class MemberDm {
   
   }
 
+
+  public function checkPartner($params) {
+  
+    $params['member_id'] = $this->_member->id;
+
+    return \App\request('App.Member.CheckPartner', $params);
+  
+  }
+
 }
