@@ -15,6 +15,13 @@ class Account extends BaseApi {
       'getDetail' => [
       
       
+      ],
+
+      'getList' => [
+      
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+
       ]
     
     ]);
@@ -30,6 +37,15 @@ class Account extends BaseApi {
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 查询账户列表
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
   
   }
 

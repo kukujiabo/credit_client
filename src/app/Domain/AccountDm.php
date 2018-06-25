@@ -32,5 +32,21 @@ class AccountDm {
     return \App\request('App.Account.GetDetail', $data);
   
   }
+  
+  public function getList() {
+  
+    if (!$this->_member) {
+    
+      return [];
+    
+    } else {
+    
+      $data['member_id'] = $this->_member->id;
+    
+    }
+  
+    return \App\request('App.AccountLog.GetList', $data);
+  
+  }
 
 }
