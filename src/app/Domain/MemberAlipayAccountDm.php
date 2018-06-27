@@ -19,7 +19,7 @@ class MemberAlipayAccountDm {
 
   public function create($data) {
   
-    $params['member_id'] = $this->_member->id;
+    $data['member_id'] = $this->_member->id;
 
     return \App\request('App.MemberAlipayAccount.Create', $data);
   
@@ -27,7 +27,7 @@ class MemberAlipayAccountDm {
 
   public function getDetail($data) {
     
-    $params['member_id'] = $this->_member->id;
+    $data['member_id'] = $this->_member->id;
 
     return \App\request('App.MemberAlipayAccount.GetDetail', $data);
   
