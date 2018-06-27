@@ -33,7 +33,7 @@ class MemberAlipayAccount extends BaseApi {
    */
   public function create() {
   
-    return $this->dm->create($this->retriveRuleParams(__FUNCTION__)));
+    return $this->dm->create($this->retriveRuleParams(__FUNCTION__));
   
   }
 
