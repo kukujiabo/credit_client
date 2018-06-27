@@ -19,6 +19,11 @@ class MemberAlipayAccount extends BaseApi {
 
         'real_name' => 'real_name|string|true||真实姓名'
       
+      ],
+
+      'getDetail' => [
+      
+      
       ]
     
     ]);
@@ -34,6 +39,12 @@ class MemberAlipayAccount extends BaseApi {
   public function create() {
   
     return $this->dm->create($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
