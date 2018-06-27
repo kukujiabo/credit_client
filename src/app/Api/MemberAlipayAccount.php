@@ -42,6 +42,12 @@ class MemberAlipayAccount extends BaseApi {
   
   }
 
+  /**
+   * 查询详情
+   * @desc 查询详情
+   *
+   * @return
+   */
   public function getDetail() {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__)); 
