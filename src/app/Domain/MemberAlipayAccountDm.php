@@ -1,7 +1,7 @@
 <?php
 namespace App\Domain;
 
-class MemberAlipayAccount {
+class MemberAlipayAccountDm {
 
   public function create($data) {
   
