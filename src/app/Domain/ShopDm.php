@@ -60,6 +60,8 @@ class ShopDm {
   }
 
   public function listQuery($params) {
+
+    $params['status'] = 1;
   
     return \App\request('App.Shop.ListQuery', $params);  
   
