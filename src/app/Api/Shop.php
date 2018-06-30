@@ -53,6 +53,7 @@ class Shop extends BaseApi {
         'mid' => 'mid|int|false||商户id',
         'min_credit' => 'min_credit|int|false||最小额度',
         'max_credit' => 'max_credit|int|false||最大额度',
+        'status' => 'status|int|false||状态',
         'order' => 'order|string|false||排序',
         'fields' => 'fields|string|false||字段',
         'page' => 'page|int|false||页码',
