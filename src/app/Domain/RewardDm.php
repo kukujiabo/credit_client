@@ -37,4 +37,10 @@ class RewardDm {
   
   }
 
+  public function loanCommisionList($data) {
+  
+    return \App\request('App.Reward.LoanCommisionList', $data);
+  
+  }
+
 }
