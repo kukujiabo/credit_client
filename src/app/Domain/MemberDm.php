@@ -133,4 +133,10 @@ class MemberDm {
   
   }
 
+  public function resetPassword($params) {
+  
+    return \App\request('App.Member.ResetPassword', $params); 
+  
+  }
+
 }
