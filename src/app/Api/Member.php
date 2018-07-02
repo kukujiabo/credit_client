@@ -52,9 +52,11 @@ class Member extends BaseApi {
 
       'updatePassword' => [
       
-        'old_password' => 'old_password|true||旧密码',
+        'old_password' => 'old_password|string|true||旧密码',
 
-        'new_password' => 'new_password|true||新密码'
+        'new_password' => 'new_password|string|true||新密码',
+
+        'code' => 'code|string|true||验证码'
       
       ],
 
