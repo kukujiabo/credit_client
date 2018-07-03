@@ -20,8 +20,15 @@ class Account extends BaseApi {
       'getList' => [
       
         'page' => 'page|int|false||页码',
+
         'page_size' => 'page_size|int|false||每页条数'
 
+      ],
+
+      'cashApply' => [
+      
+        'cash' => 'cash|float|true||提现金额'
+      
       ]
     
     ]);
@@ -46,6 +53,18 @@ class Account extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 代理提现
+   * @desc 代理提现
+   *
+   * @return int id
+   */
+  public function cashApply() {
+  
+    return $this->dm->cashApply($this->retriveRuleParams(__FUNCTION__));
   
   }
 

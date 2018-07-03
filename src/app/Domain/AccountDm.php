@@ -49,4 +49,20 @@ class AccountDm {
   
   }
 
+  public function cashApply() {
+  
+    if (!$this->_member) {
+    
+      return NULL;
+    
+    } else {
+    
+      $data['member_id'] = $this->_member->id;
+    
+    }
+  
+    return \App\request('App.CashApply.Create', $data);
+  
+  }
+
 }
