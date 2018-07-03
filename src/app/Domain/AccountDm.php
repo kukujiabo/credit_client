@@ -49,7 +49,7 @@ class AccountDm {
   
   }
 
-  public function cashApply() {
+  public function cashApply($data) {
   
     if (!$this->_member) {
     
