@@ -49,6 +49,20 @@ class Reward extends BaseApi {
         'fields' => 'fields|string|false||字段',
         'order' => 'order|string|false||排序'
       
+      ],
+
+      'auditLoanList' => [
+      
+        'loan_id' => 'loan_id|int|false||贷款id',
+
+        'fields' => 'fields|string|false||字段',
+
+        'order' => 'order|string|false||排序',
+
+        'page' => 'page|int|false||页码',
+
+        'page_size' => 'page_size|int|false||每页条数'
+      
       ]
     
     ]);
@@ -100,6 +114,18 @@ class Reward extends BaseApi {
   public function loanCommisionList() {
   
     return $this->dm->loanCommisionList($this->retriveRuleParams(__FUNCTION__));  
+  
+  }
+
+  /**
+   * 贷款脱敏数据接口
+   * @desc 贷款脱敏数据接口
+   *
+   * @return array list
+   */
+  public function auditLoanList() {
+  
+    return $this->dm->auditLoanList($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

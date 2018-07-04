@@ -43,4 +43,10 @@ class RewardDm {
   
   }
 
+  public function auditLoanList($data) {
+  
+    return \App\request('App.AuditLoan.GetList', $data);
+  
+  }
+
 }
