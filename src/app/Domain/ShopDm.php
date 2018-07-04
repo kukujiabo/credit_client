@@ -67,4 +67,10 @@ class ShopDm {
   
   }
 
+  public function getCardCommissionList($params) {
+  
+    return \App\request('App.Shop.GetCardCommissionList', $params);
+  
+  }
+
 }
