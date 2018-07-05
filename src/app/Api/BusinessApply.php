@@ -21,6 +21,7 @@ class BusinessApply extends BaseApi {
         'contact' => 'contact|string|true||联系人',
         'phone' => 'phone|string|true||联系人电话',
         'wechat' => 'wechat|string|false||微信号',
+        'reference' => 'reference|string|false||推荐人编号',
         'brief' => 'brief|string|true||商户简介'
       
       ]
