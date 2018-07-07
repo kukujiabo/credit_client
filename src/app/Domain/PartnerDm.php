@@ -27,7 +27,7 @@ class PartnerDm {
 
   public function getReferenceCards() {
   
-    $data['reference'] = $this->_member->member_identity;
+    $data['member_id'] = $this->_member->id;
   
     return \App\request('App.BusinessApply.GetReferenceCards', $data);
   
