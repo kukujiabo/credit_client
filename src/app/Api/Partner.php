@@ -13,6 +13,10 @@ class Partner extends BaseApi {
     return $this->rules([
     
       'getReferenceList' => [
+
+        'member_name' => 'member_name|string|false||会员名称',
+        'page' => 'page|int|false|1|页码',
+        'page' => 'page|int|false|10|每页条数'
       
       ],
 
