@@ -17,7 +17,7 @@ class PartnerDm {
 
   }
 
-  public function getReferenceList() {
+  public function getReferenceList($data) {
 
     $data['reference'] = $this->_member->member_identity;
   
@@ -25,7 +25,7 @@ class PartnerDm {
   
   }
 
-  public function getReferenceCards() {
+  public function getReferenceCards($data) {
   
     $data['member_id'] = $this->_member->id;
   
@@ -33,7 +33,7 @@ class PartnerDm {
   
   }
 
-  public function getReferenceLoans() {
+  public function getReferenceLoans($data) {
   
     $data['reference'] = $this->_member->member_identity;
   
