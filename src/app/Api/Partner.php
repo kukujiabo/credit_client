@@ -22,10 +22,20 @@ class Partner extends BaseApi {
 
       'getReferenceCards' => [
       
+        'name' => 'name|string|false||办卡人姓名',
+        'card_name' => 'card_name|string|false||信用卡名称',
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|10|每页条数'
+
       ],
 
       'getReferenceLoans' => [
       
+        'name' => 'name|string|false||申请人姓名',
+        'loan_name' => 'loan_name|string|false||小贷名称',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+
       ]
     
     ]);
