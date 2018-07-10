@@ -38,6 +38,8 @@ class RewardDm {
   }
 
   public function loanCommisionList($data) {
+
+    $data['status'] = 1;
   
     return \App\request('App.Reward.LoanCommisionList', $data);
   
