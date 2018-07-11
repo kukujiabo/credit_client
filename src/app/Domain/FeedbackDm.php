@@ -23,7 +23,7 @@ class FeedbackDm {
     
     }
 
-    $params['member_id'] = $this->_member->id
+    $params['member_id'] = $this->_member->id;
   
     return \App\request('App.Feedback.AddFeedback', $params);
   
@@ -37,7 +37,7 @@ class FeedbackDm {
     
     }
 
-    $params['member_id'] = $this->_member->id
+    $params['member_id'] = $this->_member->id;
   
     return \App\request('App.Feedback.GetList', $params);
   
