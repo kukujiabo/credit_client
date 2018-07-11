@@ -14,8 +14,6 @@ class Feedback extends BaseApi {
     
       'addFeedback' => [
       
-        'member_id' => 'member_id|int|true||会员id',
-
         'content' => 'content|string|true||内容',
       
       ],
