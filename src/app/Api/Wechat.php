@@ -23,6 +23,10 @@ class Wechat extends BaseApi {
       
         'url' => 'url|string|true||微信jsapi调用页面地址'
       
+      ],
+
+      'getPubTmpQrcode' => [
+      
       ]
     
     ]);
@@ -52,6 +56,16 @@ class Wechat extends BaseApi {
   
   }
 
+  /**
+   * 获取公众号推广二维码
+   * @desc 获取公众号推广二维码
+   *
+   * @return array 
+   */
+  public function getPubTmpQrcode() {
+  
+    return $this->dm->getPubTmpQrcode();
+  
+  }
+
 }
-
-
