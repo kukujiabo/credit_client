@@ -1,6 +1,8 @@
 <?php
 namespace App\Domain;
 
+use App\Library\RedisClient;
+
 class WechatDm {
 
   protected $_member; 
