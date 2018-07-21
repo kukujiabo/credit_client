@@ -29,7 +29,7 @@ class WechatDm {
 
       $params = [ 'member_id' => $this->_member->id ];
 
-      return \App\request('App.Wechat.GetPubTmpQrdcode', $params);
+      return \App\request('App.Wechat.GetPubTmpQrcode', $params);
     
     }
   
