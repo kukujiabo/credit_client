@@ -21,7 +21,7 @@ class YPosDm {
 
     $data['member_id'] = $this->_member->id;
   
-    return \App\request('App.Withdraw.Create', $data);
+    return \App\request('App.YPos.Create', $data);
   
   }
 
