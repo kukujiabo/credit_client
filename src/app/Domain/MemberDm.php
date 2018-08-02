@@ -139,4 +139,16 @@ class MemberDm {
   
   }
 
+  public function checkVip() {
+
+    $params = [
+    
+      'member_id' => $this->_member->id
+    
+    ];
+  
+    return \App\request('App.Member.CheckVip', $params); 
+  
+  }
+
 }

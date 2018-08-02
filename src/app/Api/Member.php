@@ -120,6 +120,10 @@ class Member extends BaseApi {
         'new_password' => 'new_password|string|true||新密码',
         'mobile' => 'mobile|string|true||会员手机号'
       
+      ],
+
+      'checkVip' => [
+      
       ]
     
     ]);
@@ -273,6 +277,18 @@ class Member extends BaseApi {
   public function resetPassword() {
   
     return $this->dm->resetPassword($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 检查是否vip用户
+   * @desc 检查是否vip用户
+   *
+   * @return int 1/0
+   */
+  public function checkVip() {
+  
+    return $this->dm->checkVip();
   
   }
 
