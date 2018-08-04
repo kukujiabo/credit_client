@@ -1,6 +1,11 @@
 <?php
 namespace App\Api;
 
+/**
+ * pos终端机接口
+ *
+ *
+ */
 class MPos extends BaseApi {
 
   public function getRules() {
