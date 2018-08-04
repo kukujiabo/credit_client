@@ -26,8 +26,12 @@ class YPos extends BaseApi {
         'page' => 'phone|string|false||页码',
         'page_size' => 'phone|string|false||每页条数'
       
+      ],
+
+      'getDetail' => [
+      
+      
       ]
-    
     
     ]);
   
@@ -54,6 +58,18 @@ class YPos extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 获取申请详情
+   * @desc 获取申请详情
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 
